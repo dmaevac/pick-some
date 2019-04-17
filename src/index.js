@@ -1,4 +1,4 @@
-function pickSome(count, options = [], arr) {
+function pickSome(count, options = [], arr = []) {
   if (Array.isArray(options)) {
     arr = options;
     options = { sequential: false, unique: false };

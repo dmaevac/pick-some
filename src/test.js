@@ -1,6 +1,14 @@
 const test = require('tape');
 const { pickSome, pickSomeUnique, pickSomeSequential } = require('./index');
 
+test('#pickSome - bad params', (t) => {
+  pickSome(3, {});
+  pickSome();
+  pickSome('cat');
+  pickSome({},{});
+  t.end();
+});
+
 test('#pickSome - basic', (t) => {
   const arr = [1,2,3,4,5];
   const actual = pickSome(3, arr);
@@ -46,7 +54,7 @@ test('#pickSome - sequential & unique', (t) => {
 
 test('#pickSomeUnique', (t) => {
   const arr = [1,2,3,4,5,6,7,8,9];
-  const actual = pickSomeUnique(7, { unique: true }, arr);
+  const actual = pickSomeUnique(7, arr);
   t.is(actual.length, 7, 'contains all items');
   t.is((new Set(actual)).size, 7);
   t.end();

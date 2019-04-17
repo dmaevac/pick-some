@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/DveMac/pick-some.svg?branch=master)](https://travis-ci.org/DveMac/pick-some) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Build Status](https://travis-ci.org/DveMac/pick-some.svg?branch=master)](https://travis-ci.org/DveMac/pick-some)  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # pick-some
 
@@ -38,4 +38,4 @@ pickSomeSequential(3, [1,2,3,4,5]) // => [3,3,4]
 
 ## license
 
-[GNUv3](./LICENSE)
+[MIT](./LICENSE)
