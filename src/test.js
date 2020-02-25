@@ -41,7 +41,6 @@ test('#pickSome - sequential', (t) => {
 
 test('#pickSome - sequential & unique', (t) => {
   const arr = [1,2,3,4,5,6,7,8,9];
-  debugger;
   const actual = pickSome(4, { unique: true, sequential: true }, arr);
   t.is(actual.length, 4, 'contains all items');
   let last = 0;
@@ -59,4 +58,12 @@ test('#pickSomeUnique', (t) => {
   t.is((new Set(actual)).size, 7);
   t.end();
 });
+
+test('#pickSomeUnique - pick more', (t) => {
+  const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const actual = pickSomeUnique(10, arr);
+  t.is(actual.length, 9, 'contains all items');
+  t.is((new Set(actual)).size, 9);
+  t.end();
+})
 
