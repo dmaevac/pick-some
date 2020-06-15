@@ -22,7 +22,6 @@ function pickSome(count, options = [], arr = []) {
 
   if (options.sequential && options.unique) {
     const idxs = pickSome(count, { unique: true }, Object.keys(arr).map(Number));
-    console.log(idxs)
     return idxs.sort().map(i => arr[i]);
   }
 
