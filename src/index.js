@@ -11,8 +11,8 @@ function pickSome(count, options = [], arr = []) {
 
   if (!options.sequential && options.unique) {
     const set = new Set();
-    count = Math.min(count, arrLen)
-    while (set.size < count) set.add(Math.floor(Math.random() * arrLen))
+    const limitCount = Math.min(count, arrLen)
+    while (set.size < limitCount) set.add(Math.floor(Math.random() * arrLen))
     return [...set].map(i => arr[i]);
   }
 
